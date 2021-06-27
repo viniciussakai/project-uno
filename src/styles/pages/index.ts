@@ -13,6 +13,7 @@ export const Container = styled.div`
   aside.illustration {
     flex: 1;
     background-color: ${props => props.theme.colors.primary};
+    max-width: 800px;
 
     display: grid;
     place-content: center;
@@ -26,7 +27,8 @@ export const Container = styled.div`
     align-items: center;
 
     & > diV {
-      width: 45%;
+      width: 60%;
+      max-width: 400px;
     }
 
     .social button {
