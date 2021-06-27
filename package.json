@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.6.0",
     "firebase": "^8.6.8",
     "next": "10.0.5",
     "next-images": "^1.4.1",
