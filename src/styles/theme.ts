@@ -9,7 +9,7 @@ const theme = {
     yellow: '#FAA500',
 
     white: '#FFFFFF',
-    grey: '#A8A8B3',
+    gray: '#A8A8B3',
     lightGray: '#F0F1F1',
     github: '#424141'
   }

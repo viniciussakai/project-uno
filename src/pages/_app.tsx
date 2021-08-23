@@ -1,16 +1,20 @@
 import React from 'react'
 import { AppProps } from 'next/app'
+import { Provider } from 'react-redux'
 import { ThemeProvider } from 'styled-components'
 
 import GlobalStyle from 'src/styles/global'
+import store from '../store/index'
 import theme from 'src/styles/theme'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
-    <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
-      <GlobalStyle />
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </Provider>
   )
 }
 

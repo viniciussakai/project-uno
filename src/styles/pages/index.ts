@@ -45,7 +45,7 @@ export const Container = styled.div`
 
       span {
         background-color: ${props => props.theme.colors.background};
-        color: ${props => props.theme.colors.grey};
+        color: ${props => props.theme.colors.gray};
         font-weight: 500;
         font-size: 0.9rem;
         padding: 0 8px;
@@ -57,7 +57,7 @@ export const Container = styled.div`
         top: 50%;
         left: 0;
 
-        background-color: ${props => props.theme.colors.grey};
+        background-color: ${props => props.theme.colors.gray};
         z-index: -1;
 
         height: 2px;

@@ -5,12 +5,15 @@ import { Container } from '../styles/pages/index'
 import Logo from '../public/logo.svg'
 import { Button, GithubButton, GoogleButton, Input } from '@/styles/UI'
 import { AiFillGithub, AiOutlineGoogle, AiOutlineExport } from 'react-icons/ai'
+import { useRouter } from 'next/router'
 
-const Home: React.FC = () => {
+const Login: React.FC = () => {
+  const router = useRouter()
+
   return (
     <>
       <Head>
-        <title>Homepage</title>
+        <title>Loginpage</title>
       </Head>
 
       <Container>
@@ -34,7 +37,7 @@ const Home: React.FC = () => {
 
             <Input placeholder="Digite seu apelido" />
 
-            <Button>
+            <Button onClick={() => router.push('rooms')}>
               <AiOutlineExport /> Jogar
             </Button>
           </div>
@@ -44,4 +47,4 @@ const Home: React.FC = () => {
   )
 }
 
-export default Home
+export default Login

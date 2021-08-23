@@ -1,17 +1,21 @@
 import firebase from 'firebase/app'
 
-import auth from 'firebase/auth'
+import 'firebase/auth'
 
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_KEY,
-  authDomain: process.env.FIREBASE_AUTH,
-  projectId: process.env.FIREBASE_ID,
-  storageBucket: process.env.FIREBASE_STORAGE,
-  messagingSenderId: process.env.FIREBASE_MESSAGE,
-  appId: process.env.FIREBASE_APP
+  apiKey: 'AIzaSyARcdAB0VdR6c09nMcTXChEPcS0pFiKgg0',
+  authDomain: 'reuno-1d731.firebaseapp.com',
+  projectId: 'reuno-1d731',
+  storageBucket: 'reuno-1d731.appspot.com',
+  messagingSenderId: '1066646089275',
+  appId: '1:1066646089275:web:9aea585373c7d70e27361e'
 }
 
-firebase.initializeApp(firebaseConfig)
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig)
+} else {
+  firebase.app() // if already initialized, use that one
+}
 
 const auth = firebase.auth()
 

@@ -5,21 +5,24 @@ export const Button = styled.button<IButtonProps>`
   background-color: ${props =>
     props.isOutline ? 'transparent' : props.theme.colors.primary};
 
+  border: 2px solid ${props => props.theme.colors.primary};
+
   color: ${props =>
     props.isOutline
       ? props.theme.colors.primary
       : props.theme.colors.background};
 
-  border: 2px solid ${props => props.theme.colors.primary};
-  border-radius: 0.5rem;
+  border-radius: 0rem;
+
+  cursor: pointer;
 
   width: 100%;
   min-width: 200px;
 
-  padding: 11px;
+  padding: 1rem;
 
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 700;
 
   display: flex;
   align-items: center;
@@ -50,12 +53,18 @@ export const GoogleButton = styled(Button)`
 export const Input = styled.input`
   width: 100%;
   border-radius: 0.3rem;
-  border: 1px solid ${props => props.theme.colors.grey};
+  border: 2px solid ${props => props.theme.colors.lightGray};
 
   padding: 15px 10px;
   font-size: 1rem;
 
   &:focus {
-    border: 1px solid ${props => props.theme.colors.primary};
+    border: 2px solid ${props => props.theme.colors.primary};
+    outline: 1px solid ${props => props.theme.colors.primary};
+  }
+
+  &::placeholder {
+    color: ${props => props.theme.colors.gray};
+    font-weight: bold;
   }
 `
